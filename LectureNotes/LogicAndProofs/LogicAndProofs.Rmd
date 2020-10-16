@@ -1,7 +1,7 @@
 ---
 title: "Mathematics for Economic Analysis"
 subtitle: "Logic and Proof"
-author: Ozer Arabaci
+author: Ozer Arabaci and Firat Melih Yilmaz
 date: ECON 6105, Uludag University
 output:
   xaringan::moon_reader:
@@ -14,9 +14,34 @@ output:
       #ratio: '16:9'
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
-## Introduction
 
+# Introduction
+
+In this lecture we review the main logical rules in mathematics. 
+
+## Topics to Cover
+
+- The idea of a statement and  truth value 
+- Deductive Reasoning vs. Inductive Reasoning
+- Converse, Inverse, and Contrapositive of a Statement
+- Necessity and Sufficiency
+- Mathematical Proof
+
+---
+
+# Statement and truth value 
+
+- A **statement** is an assertion that is either **true** or **false** or **open**. 
+- If a **statement** is ***true*** we say that its truth value is "True" (T). Similarly, a
+false statement has truth value "False" (F). Otherwise, if we cannot decide whether it is ***true*** or ***false*** we can conclude that it has truth value ***Open*** (O).
+
+## Examples
+
+- Ankara is the capital city of Turkey
+- $(x + y)^{2} = x^{2} + 2xy + y^{2}$
+- NAFTA is a trade agreement signed by Canada, Mexico, and the United States. 
+- All cats are white
+-  All prime numbers are odd numbers.
+- $x > y$
+- $x^{2} - 9 = 0$
