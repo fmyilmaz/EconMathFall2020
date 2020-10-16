@@ -22,7 +22,7 @@
 
 You will need to install the following programs on your computer.
 
-#Programs 
+# Programs 
 
 You will need to install the following programs on your computer
 
