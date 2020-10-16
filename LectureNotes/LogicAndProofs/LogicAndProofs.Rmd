@@ -87,4 +87,17 @@ Logical reasoning can be classified as either deductive reasoning or inductive r
 Let $p$ be a statement. Then the statement " $p$ is **false**." is called the **negation** of $p$ and denoted by $\neg p$. The operation can be illustrated by a truth table:
 
 
+| p     	|  $\neg p$ |
+|-------	|-------	  |
+| True  	| False 	  |
+| False 	| True      |
+
+## Example
+
+- If  $p$ is “Today is Monday”, then $\neg p$ means “Today is not Monday”.
+- if p is $x \nless 2$ then $\neg p$ means $x \geq 2$
+
+
+Let  $p$ be a statement. Then  $\neg(\neg p)$  is logically equivalent to $p$. More precisely $(\neg(\neg p)) \iff p$.
+
 
