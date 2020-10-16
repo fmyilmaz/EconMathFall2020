@@ -17,15 +17,15 @@
 - Economists' Mathematical Manual by Sydsaeter et al. [link](https://www.amazon.com/Economists-Mathematical-Manual-Knut-Sydsaeter/dp/3540260889)
 
 
-<<<<<<< HEAD
+
 # Programs
 
 You will need to install the following programs on your computer.
-=======
+
 #Programs 
 
 You will need to install the following programs on your computer
->>>>>>> 122e9ab17600ddabecbdb2abbc4e6a8008aedd39
+
 
 - [Git](https://git-scm.com/)
 - [Julia](https://julialang.org/) or [JuliaPro](https://juliacomputing.com/products/juliapro.html)
