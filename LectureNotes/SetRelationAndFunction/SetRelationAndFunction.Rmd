@@ -1,0 +1,23 @@
+---
+title: "Mathematics for Economic Analysis"
+subtitle: "Sets, Relations, and Functions"
+author: Ozer Arabaci
+date: ECON 6105, Uludag University
+output:
+  xaringan::moon_reader:
+    css: ['default', 'metropolis', 'metropolis-fonts', 'ou-colors.css']
+    # self_contained: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #ratio: '16:9'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+
