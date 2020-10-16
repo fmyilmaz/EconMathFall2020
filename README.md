@@ -22,8 +22,8 @@
 | Class 	|             Topics to Cover             	| Slides 	| Text 	| Pre-class reading 	| Code 	|
 |:-----:	|:---------------------------------------:	|:------:	|:----:	|-------------------	|:----:	|
 |   1   	|             Logic and Proof             	|    [Slide 1](https://raw.githack.com/fmyilmaz/EconMathFall2020/main/LectureNotes/LogicAndProofs/LogicAndProofs.html)    	|      	|                   	|      	|
-|   2   	|      Sets, Relations, and Functions     	|        	|      	|                   	|      	|
-|   3   	| Limits, Continuity, and Differentiation 	|        	|      	|                   	|      	|
+|   2   	|      Sets, Relations, and Functions     	|  [Slide 2](https://raw.githack.com/fmyilmaz/EconMathFall2020/main/LectureNotes/SetRelationAndFunction/SetRelationAndFunction.html)      	|      	|                   	|      	|
+|   3   	|  	|        	|      	|                   	|      	|
 |   4   	|                                         	|        	|      	|                   	|      	|
 |   5   	|                                         	|        	|      	|                   	|      	|
 |   6   	|                                         	|        	|      	|                   	|      	|
