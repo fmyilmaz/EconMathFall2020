@@ -1,8 +1,8 @@
 ---
 title: "Mathematics for Economic Analysis"
 subtitle: "Logic and Proof"
-author: Firat Melih Yilmaz
-date: ""
+author: Ozer Arabaci
+date: ECON 6105, Uludag University
 output:
   xaringan::moon_reader:
     css: ['default', 'metropolis', 'metropolis-fonts', 'ou-colors.css']
@@ -80,8 +80,11 @@ Logical reasoning can be classified as either deductive reasoning or inductive r
 - implication (if $\dots$ then): $\implies$
 - Biconditional (if and only if): $\iff$
 
+---
 
+# Logical Connectives
 
+Let $p$ be a statement. Then the statement " $p$ is **false**." is called the **negation** of $p$ and denoted by $\neg p$. The operation can be illustrated by a truth table:
 
 
 
