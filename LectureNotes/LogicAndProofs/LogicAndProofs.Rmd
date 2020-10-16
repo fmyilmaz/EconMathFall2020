@@ -100,4 +100,4 @@ Let $p$ be a statement. Then the statement " $p$ is **false**." is called the **
 
 Let  $p$ be a statement. Then  $\neg(\neg p)$  is logically equivalent to $p$. More precisely $(\neg(\neg p)) \iff p$.
 
-
+> **QUESTION:** Find $\neg p$ for $p :=(\forall x \in \mathbb{R}, \exists n \in \mathbb{Z}, x<n)$.
