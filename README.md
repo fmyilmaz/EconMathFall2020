@@ -17,11 +17,6 @@
 - Economists' Mathematical Manual by Sydsaeter et al. [link](https://www.amazon.com/Economists-Mathematical-Manual-Knut-Sydsaeter/dp/3540260889)
 
 
-
-# Programs
-
-You will need to install the following programs on your computer.
-
 # Programs 
 
 You will need to install the following programs on your computer
