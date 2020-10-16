@@ -17,9 +17,9 @@
 - Economists' Mathematical Manual by Sydsaeter et al. [link](https://www.amazon.com/Economists-Mathematical-Manual-Knut-Sydsaeter/dp/3540260889)
 
 
-# Programs 
+# Programs
 
-You will need to install the following programs on your computer
+You will need to install the following programs on your computer.
 
 - [Git](https://git-scm.com/)
 - [Julia](https://julialang.org/) or [JuliaPro](https://juliacomputing.com/products/juliapro.html)
