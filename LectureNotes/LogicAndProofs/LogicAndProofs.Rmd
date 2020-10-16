@@ -45,3 +45,7 @@ false statement has truth value "False" (F). Otherwise, if we cannot decide whet
 -  All prime numbers are odd numbers.
 - $x > y$
 - $x^{2} - 9 = 0$
+
+---
+
+
