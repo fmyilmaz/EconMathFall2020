@@ -12,6 +12,11 @@ output:
       countIncrementalSlides: false
 ---
 
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
 
 
 # Introduction
