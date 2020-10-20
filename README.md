@@ -38,7 +38,7 @@ You will need to install the following programs on your computer
 
 | Class 	|                Topics to Cover               	|                                                        Slides                                                       	| Text 	| Pre-class reading 	| Codes 	| Assignments 	|
 |:-----:	|:--------------------------------------------:	|:-------------------------------------------------------------------------------------------------------------------:	|:----:	|:-----------------:	|:-----:	|:-----------:	|
-|   1   	| Logic and Proof                              	| [Slide 1](https://raw.githack.com/fmyilmaz/EconMathFall2020/main/LectureNotes/LogicAndProofs/LogicAndProofs.html#1) 	|      	|                   	|       	|             	|
+|   1   	| Logic and Proof                              	| [Slide](https://raw.githack.com/fmyilmaz/EconMathFall2020/main/LectureNotes/LogicAndProofs/LogicAndProofs.html#1) 	|      	|                   	|       	|             	|
 |   2   	| Sets, Relations, Functions and Real Analysis 	|                                                                                                                     	|      	|                   	|       	|             	|
 |   3   	| Introduction to Topology and Linear Algebra  	|                                                                                                                     	|      	|                   	|       	|             	|
 |   4   	| Linear Algebra Cont.                         	|                                                                                                                     	|      	|                   	|       	|             	|
