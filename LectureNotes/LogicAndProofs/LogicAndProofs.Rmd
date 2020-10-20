@@ -106,3 +106,65 @@ Let $p$ be a statement. Then the statement " $p$ is **false**." is called the **
 Let  $p$ be a statement. Then  $\neg(\neg p)$  is logically equivalent to $p$. More precisely $(\neg(\neg p)) \iff p$.
 
 > **QUESTION:** Find $\neg p$ for $p :=(\forall x \in \mathbb{R}, \exists n \in \mathbb{Z}, x<n)$.
+
+
+---
+
+# Logical Connectives
+
+Let $p$ and $q$ be statements. Then,  "*Both a and b are true.*"  is called a **conjunction** and denoted by $p \land q$. The operation can be illustrated by a truth table:
+
+
+| $p$    | $q$     | $p \land q$ |
+|-------|-------|---------   |
+| True  | True  | True       |
+| False | True  | False      |
+| True  | False | False      |
+
+## Example
+
+- The Moon revolves around the Earth and elephant can fly.
+- $x \leq 2 \land x \geq 1 \iff 1 \leq x \leq 2$
+
+---
+
+# Logical Connectives
+
+“*Either a or b (or both) is true.*” is called a **disjunction** and denoted by $p \lor q$. 
+
+
+| p     | q     | $p \lor q$ |
+|-------|-------|---------|
+| True  | True  | True    |
+| False | True  | True    |
+| True  | False | True    |
+| False | False | False   |
+
+
+## Example
+
+- $0 \leq 1$ contains $0 < 1 \lor 0 = 1$
+
+---
+
+# Logical Connectives
+
+“*If $p$ is true, then so is $q$.*” is called an **implication** and denoted by $p \implies q$.
+
+- The order of $p$ and $q$ is not important in conjunction and disjunction. That is, $p \land q$ is the same as $q \land p$. 
+- This is not true for an implication, which is written as “If **p then q”**, and denoted by $p \implies q$. 
+- The statement $p$ is called the **hypothesis** and $q$ the **conclusion**. 
+- Implication is also called a conditional statement.
+
+## Example
+
+- $x$ is the healthy person $\implies x$ is breathing.  
+- $x > 0 \implies x^2 > 0$
+- $xy = 0 \implies x = 0 \lor y = 0 \lor both$
+
+
+> **QUESTION:** $x^2 > 0 \implies x > 0 ?$
+
+---
+
+# Logical Connectives
