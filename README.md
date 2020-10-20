@@ -1,5 +1,9 @@
 # Mathematics for Economic Analysis
 
+- Instructor: [Assoc.Prof. Ozer Arabaci, Ph.D.](http://www.uludag.edu.tr/iibf/default/konu/4565)
+- Teaching Assistant: [Firat Melih Yilmaz](https://github.com/fmyilmaz)
+
+
 # Course Materials
 
 ## Main Materials
@@ -9,6 +13,8 @@
 - Advanced Mathematical Economics by Rakesh V. Vohra [link](https://www.amazon.com/Advanced-Mathematical-Economics-Routledge-Finance-ebook/dp/B000PWQNKO/ref=sr_1_3?dchild=1&keywords=advanced+mathematical+economics&qid=1602808276&s=books&sr=1-3)
 
 - A First Course in Optimization Theory by Rangarajan K. Sundaram [link](https://www.amazon.com/First-Course-Optimization-Theory-ebook/dp/B00AKE1UBE/ref=pd_sim_351_1/142-0115944-9071834?_encoding=UTF8&pd_rd_i=B00AKE1UBE&pd_rd_r=712b25f2-10d3-4e40-9614-6a11f4ecd589&pd_rd_w=U9qU5&pd_rd_wg=A0D8t&pf_rd_p=37f7dfa1-8c4e-4106-9502-a190ed3a2f4f&pf_rd_r=CX0VMKPZRBMRSDNSPSHP&psc=1&refRID=CX0VMKPZRBMRSDNSPSHP)
+
+- Mathematical Economics by by Kam Yu [link](https://www.amazon.com/Mathematical-Economics-Neoclassical-Springer-Business-ebook/dp/B07ZX3444Y/ref=sr_1_2?dchild=1&qid=1603175047&refinements=p_27%3AKam+Yu&s=digital-text&sr=1-2&text=Kam+Yu)
 
 ## Additional Materials 
 
@@ -30,12 +36,15 @@ You will need to install the following programs on your computer
 
 
 
-| Class 	|             Topics to Cover             	| Slides 	| Text 	| Pre-class reading 	| Codes 	| Assignments 	|
-|:-----:	|:---------------------------------------:	|:------:	|:----:	|-------------------	|:-----:	|-------------	|
-|   1   	|             Logic and Proof             	|   [Slide 1](https://raw.githack.com/fmyilmaz/EconMathFall2020/main/LectureNotes/LogicAndProofs/LogicAndProofs.html)     	|      	|                   	|       	|             	|
-|   2   	|      Sets, Relations, and Functions     	|  [Slide 2](https://raw.githack.com/fmyilmaz/EconMathFall2020/main/LectureNotes/SetRelationAndFunction/SetRelationAndFunction.html)    	|      	|                   	|       	|             	|
-|   3   	| Limits, Continuity, and Differentiation 	|        	|      	|                   	|       	|             	|
-|   4   	|                                         	|        	|      	|                   	|       	|             	|
-|   5   	|                                         	|        	|      	|                   	|       	|             	|
-|   6   	|                                         	|        	|      	|                   	|       	|             	|
-|   7   	|                                         	|        	|      	|                   	|       	|             	|
+| Class 	|                Topics to Cover               	|                                                        Slides                                                       	| Text 	| Pre-class reading 	| Codes 	| Assignments 	|
+|:-----:	|:--------------------------------------------:	|:-------------------------------------------------------------------------------------------------------------------:	|:----:	|:-----------------:	|:-----:	|:-----------:	|
+|   1   	| Logic and Proof                              	| [Slide 1](https://raw.githack.com/fmyilmaz/EconMathFall2020/main/LectureNotes/LogicAndProofs/LogicAndProofs.html#1) 	|      	|                   	|       	|             	|
+|   2   	| Sets, Relations, Functions and Real Analysis 	|                                                                                                                     	|      	|                   	|       	|             	|
+|   3   	| Introduction to Topology and Linear Algebra  	|                                                                                                                     	|      	|                   	|       	|             	|
+|   4   	| Linear Algebra Cont.                         	|                                                                                                                     	|      	|                   	|       	|             	|
+|   5   	| Convex Analysis                              	|                                                                                                                     	|      	|                   	|       	|             	|
+|   6   	| Introduction to Optimization                 	|                                                                                                                     	|      	|                   	|       	|             	|
+|   7   	| Optimization Cont.                           	|                                                                                                                     	|      	|                   	|       	|             	|
+|   8   	| Integration                                  	|                                                                                                                     	|      	|                   	|       	|             	|
+|   9   	| Introduction to Dynamic Modelling            	|                                                                                                                     	|      	|                   	|       	|             	|
+|   10  	| Dynamic Modelling Cont                       	|                                                                                                                     	|      	|                   	|       	|             	|
