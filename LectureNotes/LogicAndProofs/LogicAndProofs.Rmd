@@ -12,6 +12,9 @@ output:
       countIncrementalSlides: false
 ---
 
+
+
+
 <style type="text/css">
   body{
   font-size: 12pt;
@@ -30,6 +33,7 @@ In this lecture we review the main logical rules in mathematics.
 - Logical Connectives
 - Converse, Inverse, and Contrapositive of a Statement
 - Necessity and Sufficiency
+- Quantifiers
 - Mathematical Proof
 
 ---
@@ -124,7 +128,10 @@ Let $p$ and $q$ be statements. Then,  "*Both a and b are true.*"  is called a **
 ## Example
 
 - The Moon revolves around the Earth and elephant can fly.
-- $x \leq 2 \land x \geq 1 \iff 1 \leq x \leq 2$
+- $(x \leq 2) \land (x \geq 1) \iff 1 \leq x \leq 2$
+- $x \land y \in \mathbb{R}$ is wrong. Why?
+> **QUESTION:** Determine the truth values of the following statements.
+> $(\sqrt{30} > 5) \land (\sqrt{30} < 7)$
 
 ---
 
@@ -143,10 +150,23 @@ Let $p$ and $q$ be statements. Then,  "*Both a and b are true.*"  is called a **
 
 ## Example
 
-- $0 \leq 1$ contains $0 < 1 \lor 0 = 1$
+- $0 \leq 1$ contains $(0 < 1) \lor (0 = 1)$. 
+
+- $\left(4^{2}-5^{2} \leq 0\right) \lor \left(\sqrt{3^{2}+4^{2}}=3+4\right)$
 
 ---
 
+# More compound statements
+
+let $p, q$, and $r$ be simple statements. Please provide truth tables of following statements:
+
+- $(p \lor q) \land r$
+- $p \lor (q \land r)$
+- $(\neg p) \lor (\neg q)$
+- $(p \lor q) \land (\neg r)$
+
+
+---
 # Logical Connectives
 
 “*If $p$ is true, then so is $q$.*” is called an **implication** and denoted by $p \implies q$.
@@ -160,7 +180,7 @@ Let $p$ and $q$ be statements. Then,  "*Both a and b are true.*"  is called a **
 
 - $x$ is the healthy person $\implies x$ is breathing.  
 - $x > 0 \implies x^2 > 0$
-- $xy = 0 \implies x = 0 \lor y = 0 \lor both$
+- $xy = 0 \implies (x = 0) \lor (y = 0) \lor both$
 
 
 > **QUESTION:** $x^2 > 0 \implies x > 0 ?$
@@ -168,3 +188,193 @@ Let $p$ and $q$ be statements. Then,  "*Both a and b are true.*"  is called a **
 ---
 
 # Logical Connectives
+
+If the statement $p \implies q$ and its converse $q \implies q$ are both true, we have i.e. $p$ is **equivalent** to $q$, or $p$ *if and only if * $q$.  
+
+- That is, $p \implies q \land q \implies p$, which has a shorthand notation $p \iff q$. 
+
+## Example
+
+- $\left.\begin{array}{ll}p: xy = 0 \\ q: (x = 0) \lor (y = 0) \end{array}\right\} xy = 0 \iff (x = 0) \lor (y = 0)$
+
+
+- $\left.\begin{array}{ll}p: x > 0 \\ q: x^3 > 0 \end{array}\right\} x > 0 \iff x^3 > 0$
+
+---
+
+# Converse, Inverse, and Contrapositive
+
+Let $p \implies q$ be  a conditional statement. Then
+- $q \implies p$ is the converse, 
+- $\neg p \implies \neg q$ is the inverse,
+- $\neg q \implies \neg p$ is the contrapositive of the $p \implies q$.
+
+## Example
+
+- If it is a whole number, then it is an integer. $(p \implies q)$
+- If it is an integer, then it is a whole number. $(q \implies p)$
+- If it is not a whole number, then it is not an integer. $(\neg p \implies \neg q)$
+- If it is not an integer, then it is not a whole number. $(\neg q \implies \neg p)$ 
+
+
+---
+
+# Tautology
+
+A proposition is *tautology* if its truth table contains only true values for every case. 
+
+Consider following statement: "*I will either get paid or not get paid.* then we can represent it using $p$ and $\neg  p$ as
+- $p$: I will get paid. 
+- $\neg  p$: I will not get paid.
+
+
+| p     | $\neg p$     | $p \lor \neg p$ |
+|-------|-------|---------|
+| True  | False | True    |
+| False | True  | True    |
+
+
+**QUESTION:** $((p \land q) \implies r) \iff (p \implies (q \implies r))$ is tautology?
+
+---
+
+# Necessity and Sufficiency
+
+In logic, *necessity* and *sufficiency* are terms used to describe a **conditional** or **implicational** relationship between two statements.
+- A *necessary* condition is expressed by the conclusion.
+- A *sufficient* condition is expressed by the hypothesis. 
+
+>Suppose $p \implies q$ is true. Then
+- *p* is called sufficent for *q*
+- *q* is called necessary for *p*
+
+##### Example
+
+- Any number that is divisible by $6$ is also divisible by $3$.
+
+
+Suppose $(p \implies q) \land (q \implies p)$ then $p$ and $q$ are *sufficient* and *necessary* for each other.
+
+##### Example
+
+- Any number that  is divisible by  $6$  is also divisible by $3$ and $2$. 
+
+
+
+---
+
+# De Morgan's laws for logic
+
+#### Commutativity
+
+- $p \lor q \iff q \lor p$
+- $p \land q \iff q \land p$
+
+#### Associativity
+
+- $p \lor q \lor r \iff (p \lor q) \lor r$ or $p \lor (q \lor r)$
+- $p \land q \land r \iff (p \land q) \land r$ or $p \land (q \land r)$
+
+#### Idempotency
+
+- $p \land p \iff p$
+- $p \lor p \iff p$
+
+#### Distributivity
+
+- $p \lor (q \land r) \iff (p \lor q) \land (p \lor r)$
+- $p \land (q \lor r) \iff (a \land q) \lor (p \land r)$
+
+---
+
+# De Morgan's laws for logic
+
+1) Complement of the union equals the intersection of the complements. 
+- $\neg(p \lor q) \iff \neg p \land \neg q$ 
+
+2) Complement of the intersection equals the union of the complements
+- $\neg(p \land q) \iff \neg p \lor \neg q$
+
+> **QUESTION:** Please proof the first De Morgan's law using truth table. 
+
+
+---
+
+# Quantifiers
+
+**Quantifiers** are words, expressions, or phrases that indicate the number of elements that a statement pertains to. 
+- In mathematical logic, there are two quantifiers: '*there exists*' and '*for all*'.
+- Suppose a *propositional function* $p(x)$ that is a statement involving a variable $x$. For instance $p(x): 2x$ is an even integer. 
+- Also suppose $x$ is element of a set $D$. For example x is an element of the set of integers. Then $D$ can be called as the *domain* of $p(x)$. 
+- We can write $p(x)$ *for all* $x$ in a domain $D$. 
+
+#### Example
+
+- $\forall x \in \mathbb{R} \ni x^{2} \geq 0$
+- $\forall n \in \mathbb{N} \ni \frac{n(n+1)}{2}$
+
+So $\forall$ is called the *universal quantifier*. 
+
+---
+
+# Quantifiers
+
+For some $x \in D,  p(x)$ is true if there *exists* an element $x$ in the domain $D$ for which $p(x)$ is true. 
+
+#### Example
+- In introduction part,  we claim that $x^{2} - 9 = 0$ is not a statement. So, we can turn it into a statement by adding a quantifier. $\exists x \in \mathbb{R} \ni x^{2} - 9 = 0$. 
+- $\exists x \in \mathbb{R} \ni x^{2} = 25$
+- $\exists! x \in \mathbb{N} \ni x^{2} = 25$
+
+So $\exists$ and $\exists!$ are called the *existential quantifier*. 
+
+---
+
+# Mathematical Proof
+
+A mathematical system consists of
+
+- Undefined terms 
+- Definations
+- Postulates/Axioms.
+
+*Undefined terms* are the basic building blocks of a mathematical system.
+- These are words that are accepted as starting concepts of mathematical system. 
+
+#### Example
+- *Point* or *Line* in Euclidean geometry. 
+
+*Defination* is a proposition constructed from undefined terms and previously accepted concepts. 
+
+#### Example
+- Two lines are *parallel* if they never meet.
+
+
+---
+
+# Mathematical Proof
+
+*Postulates/Axioms* These are basic facts about undefined terms. The simpler and more fundamental they are, the better. 
+#### Example
+- “Every pair of points determines a line”, or “if $x = y$, then $y = x$.”
+
+*Theorems* These are the statements that make mathematics what it is -they are facts that we prove using axioms, definitions, and theorems that we’ve proved earlier. (Propositions, Lemmas, Corollaries are all species of theorems.)
+- A theorem is a proposition of the form $p \implies q$ 
+
+#### Example
+- All right angles have the same measure, namely $90^{\circ}$.
+
+---
+
+# Mathematical Proof
+
+A *lemma* is a small theorem which is used to prove a bigger theorem. 
+
+#### Example
+- **Euclid's lemma**: If $a$ prime $p$ divides the product $ab$ of two integers $a$ and $b$, then $p$ must divide at least one of those integers $a$ and $b$.
+
+A *corollary* is a theorem that can be proven to be a logical consequence of another theorem. 
+
+#### Example
+
+- If the three sides of a triangle have aqual lenght, then its angles also have equal measure. 
