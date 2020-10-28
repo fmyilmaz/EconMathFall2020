@@ -75,6 +75,12 @@ Logical reasoning can be classified as either deductive reasoning or inductive r
 
 ---
 
+# Deductive vs. Inductive Reasoning
+
+![](https://upload.wikimedia.org/wikipedia/commons/a/a4/Argument_terminology_used_in_logic_%28en%29.svg)
+
+---
+
 # Logical Connectives
 
 
