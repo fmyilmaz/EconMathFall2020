@@ -1,6 +1,6 @@
 ---
 title: "Mathematics for Economic Analysis"
-subtitle: "Sets, Relations, and Functions"
+subtitle: "Real Analysis"
 author: Ozer Arabaci
 date: ECON 6105, Uludag University
 output:
@@ -19,5 +19,196 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Introduction
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+
+
+# Introduction
+
+In this lecture we review the basic topic in real analysis. 
+
+## Topics to Cover
+
+- Sets
+- ZFC Axioms
+- Relations
+- Functions
+
+---
+
+
+# Introduction to Real Analysis
+
+Real analysis is the branch of mathematical analysis that studies the behavior of real numbers, sequences and series of real numbers, and real functions.
+
+>**Question**: What is the difference between Real Analysis and Calculus?
+
+
+---
+
+
+# Introduction to Set Theory
+
+A *set* is collection of elements/objects.
+
+- $A = \{1,2,3,4\}$
+
+- A sets may include sets as their members
+
+- $A = \{\{1,2\},\{3,4\}\}$
+
+- The empty set, $\emptyset$, is the only set with no elements at all.
+
+- For any set $A$, we use the notation $x \in A$ to indicate that *“ $x$ is an element of $A$” (“or belongs to A” or “is a member of A”).*
+
+**Definition**: *Let $A$ and $B$ a set. If $A$ is subset of $B$, we donate it as $A \subseteq B$ or $B$ is a superset of $A,$ denoted by $B \supseteq A$.*
+- Formally, $(x \in A \implies x \in B) \iff (A \subseteq B)$. 
+
+
+
+---
+
+
+# Introduction to Set Theory
+
+## Properties
+
+- A set A is a subset of B if and only if their intersection is equal to A.
+Formally: $A \subseteq B \Leftrightarrow A \cap B=A$
+
+- A set A is a subset of B if and only if their union is equal to B.
+Formally: $A \subseteq B \Leftrightarrow A \cup B=B$
+
+- A finite set A is a subset of B, if and only if the cardinality of their intersection is equal to the cardinality of A.
+Formally: $A \subseteq B \Leftrightarrow|A \cap B|=|A|$
+
+>**Question**: What is the difference between $\subseteq$ and $\subset$?
+
+---
+
+
+# Introduction to Set Theory
+
+**Definition**: *The cardinality of a set A is a measure of a set's size, meaning the number of elements in the set. We donate it as $|A|$*. 
+
+- $A = \{1,2,3,4\}$ so $|A| = 4$
+
+**Definition**: *Two finite sets $A$ and $B$ are equivalent if their cardinal number is same. We donate it as $A \equiv B$*. 
+
+- $A = \{a,b,c,d\}$ and $B = \{1,2,3,4\}$, $|A| = |B|$ so $A \equiv B$
+
+**Definition**: *Two  sets $A$ and $B$ said to be equal if every element of $A$ is a member of $B$, and every element of $B$ is a member of $A$*. 
+
+- $A =  \{ 1, 2, 3, 4\}$, $B = \{ 1, 2, 3, 4\}$, so $A = B$.
+
+
+---
+
+
+# Introduction to Set Theory
+
+## Common Number Sets
+
+- $\mathbb{N}=$ Natural Numbers $=\{1,2,3, \ldots\}$.
+
+- $\mathbb{W}$ or $\mathbb{N}_{0}=\mathrm{Whole}$ Numbers $=\{0,1,2,3, \ldots\}$. 
+
+- $\mathbb{Z}= \mathrm{Integers} =\{\ldots,-1,-2,-3,0,1,2,3, \ldots\}$. 
+
+- $\mathbb{Q}= \mathrm{Rational Numbers} =\{\mathrm{p} / \mathrm{q} : \mathrm{p}$ and $\mathrm{q}$ are integers $\}$.
+
+- $\mathbb{I}= \text{Irrational Numbers}=\{\text {non-rational number}\}$.
+
+- $\mathbb{R}=$ Real Numbers $=\{$ All of the above number sets $\}$
+
+- $\mathbb{R}_{+}= \{x \in \mathbb{R} \ni x \geq 0 \}$ and $\mathbb{R}_{++}= \{x \in \mathbb{R} \ni x > 0 \}$ 
+
+- $\mathbb{C}=\text { Complex Numbers }=\{a+b i : \text { a and } b \text { are real, } i=\sqrt{-1}\}$.
+
+
+---
+
+
+# Introduction to Set Theory
+
+
+**Definition:** Let $\mathbb{N}_{0} =\{0,1,2,3, \ldots\}$ and let $|\mathbb{N}|:= \aleph_{0}$. 
+
+- If $|A| < \aleph_{0}$ then set $A$ is called **finite**.
+
+- If $|A| = \aleph_{0}$ then set $A$ is called **countably infinite (or countable)**.
+
+- If $|A| > \aleph_{0}$ then set $A$ is called **uncountably infinite (or uncountable)**.
+
+
+**Definition:** *The powerset of a set $A$ is the set of all subsets of $A$, including the empty set and $A$ itself.*
+
+- If $A$ is the set $A =\{x, y, z\},$ then the $\mathscr{P}(A)$ of $A$ is: $\mathscr{P}(A) = \{\emptyset,\{x\},\{y\},\{z\},\{x, y\},\{x, z\},\{y, z\},\{x, y, z\}\}$
+
+- **Definition:** *Any family of subsets of S is itself a subset of the power set $\mathscr{P}(A)$ if it has no repeated members*. 
+
+
+---
+
+
+# Introduction to Set Theory
+
+
+## Set Operations
+
+- Union of a sets: $A \cup B = \{x | (x \in A) \lor (x \in B) \}$
+
+- Intersection of sets: $A \cap B = \{x | (x \in A) \land (x \in B) \}$
+
+- Relatively complement $A - B = \{x | (x \in A) \land (x \notin B)\}$
+
+- Complement of a set: $A^{c} = U \backslash A$ 
+
+-  Symmetric difference: $A \Delta B=(A \backslash B) \cup(B \backslash A)$
+
+---
+
+# ZFC Axioms
+
+In set theory, Zermelo–Fraenkel set theory is an axiomatic system that was proposed in the early twentieth century in order to formulate a theory of sets free of paradoxes such as Russell's paradox.
+
+
+### 1 Axiom of extensionality
+
+Two sets are equal (are the same set) if they have the same elements: $\forall x\forall y[\forall z(z\in x\Leftrightarrow z\in y)\Rightarrow x=y]$
+
+
+### 2  Axiom of power set
+
+The Axiom of Power Set states that for any set $x$, there is a set $y$ that contains every subset of $x$: 
+$\forall x\exists y\forall z[z\subseteq x\Rightarrow z\in y]$.
+
+### 3  Axiom of pairing
+
+If $x$ and $y$ are sets, then there exists a set which contains $x$  and $y$ as elements.
+
+$\forall x\forall y\exists z((x\in z)\land (y\in z)).$
+
+---
+
+# ZFC Axioms
+
+### 4 Axiom of union
+
+The union over the elements of a set exists. For example, the union over the elements of the set $\{\{1,2\},\{2,3\}\}$ is $\{1,2,3\}$.
+The axiom of union states that for any set of sets $\mathcal{F}$ there is a set $A$ containing every element that is a member of some member of $\mathcal{F}$:
+
+$\forall \mathcal{F} \exists A \forall Y \forall x[(x \in Y \wedge Y \in \mathcal{F}) \Rightarrow x \in A]$
+
+Although this formula doesn't directly assert the existence of $\cup \mathcal{F}$, the set $\cup \mathcal{F}$ can be constructed from $A$ in the above using the axiom schema of specification:
+$\cup \mathcal{F}:=\{x \in A: \exists Y(x \in Y \wedge Y \in \mathcal{F})\}$
+
+
+### 4 Axiom of subsets
+
 
 
