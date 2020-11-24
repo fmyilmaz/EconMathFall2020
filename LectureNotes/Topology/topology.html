@@ -30,7 +30,39 @@ class: center, middle, inverse, title-slide
 
 
 
-
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 65px;
+height: 128px;
+z-index: 0;
+background-image: url(uu_logo.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:10px;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
 
 &lt;style&gt;
 .remark-slide-content.hljs-default {
@@ -55,6 +87,9 @@ In this lecture we review the basic topic in real analysis.
 - Binary Operations
 - Group
 - Fields
+- Vector Space
+- Inner Product Space
+- Normed Vector Space
 - Metric Space
 
 ---
@@ -62,13 +97,13 @@ In this lecture we review the basic topic in real analysis.
 # Binary Operation
 
 .bg-washed-red.br1.shadow-3.ph2.mt3[
-**Defination**
+**<i class="fas  fa-info-circle "></i> Definition**
 
 *Let `\(G\)` be a set. A binary operation on `\(G\)` is a function that assigns each ordered pair of elements of `\(G\)` an element of `\(G\)`. *
 ]
 
 .bg-washed-green.br1.shadow-3.ph2.mt3[
-**Example**
+**<i class="fas  fa-lightbulb "></i> Example**
 
 Let `\(a, b \in \mathbb{R}\)` Then, apply `\(\oplus\)` (usual addition) on `\(a\)` and `\(b\)`. If  `\(a \oplus b \in \mathbb{R}\)` that means the `\(\oplus\)` operator is a *binary operator*.
 ]
@@ -86,7 +121,7 @@ Let `\(a, b \in \mathbb{R}\)` Then, apply `\(\oplus\)` (usual addition) on `\(a\
 # Group
 
 .bg-washed-red.br1.shadow-3.ph2.mt3[
-**Definition**
+**<i class="fas  fa-info-circle "></i> Definition**
 
 *Let `\(G\)` a set together with a binary operation that assigns each ordered pair `\((a,b)\)` of elements of `\(G\)` an element in `\(G\)`, donated by `\(ab\)`. We say `\(G\)` is a group under this operation if the following three properties are satisfied.* 
 
@@ -106,7 +141,7 @@ A group is said to be an **Abelian** group if it satisfy `\(ab = ba, \forall a,b
 # Group
 
 .bg-washed-green.br1.shadow-3.ph2.mt3[
-**Example**
+**<i class="fas  fa-lightbulb "></i> Example**
 
 Let set to be `\(\mathbb{R}\)` and opetation `\(\oplus\)`. If `\(\forall a,b \in \mathbb{R}\)` then
 
@@ -130,7 +165,7 @@ Let set to be `\(\mathbb{R}\)` and opetation `\(\oplus\)`. If `\(\forall a,b \in
 # Fields
 
 .bg-washed-red.br1.shadow-3.ph2.mt3[
-**Definition**
+**<i class="fas  fa-info-circle "></i> Definition**
 
 A non empty set `\(\mathbb{F}\)` equipped with two binary operations addition `\(\oplus: \mathbb{F} \times \mathbb{F} \rightarrow \mathbb{F}\)`  where `\((a, b) \mapsto a \oplus b\)` and multiplication `\(\otimes: \mathbb{F} \times \mathbb{F} \rightarrow \mathbb{F}\)` where `\((a, b) \mapsto a \otimes b\)` is said to be a field if it satisfies the following axioms `\(\forall a, b, c \in \mathbb{F}:\)`
 
@@ -145,10 +180,221 @@ A non empty set `\(\mathbb{F}\)` equipped with two binary operations addition `\
 ]
  
 .bg-washed-green.br1.shadow-3.ph2.mt3[
-**Example**
+**<i class="fas  fa-lightbulb "></i> Example**
 - The set of `\(\mathbb{R}\)` and `\(\mathbb{Z}\)` with the `\(\oplus\)` and `\(\otimes\)` is a field.
 - The Euclidean set `\(\mathbb{R}^{2}\)` with the `\(\oplus\)` and `\(\otimes\)` is not a field.
 ]
+
+
+---
+
+# Vector Space
+
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-info-circle "></i> Definition**
+
+Vector space `\((V, \mathbb{F})\)` is a set of vectors, and a field of scalars `\(\mathbb{F}\)` equipped with (binary) Operations:
+- **Vector Addition:** `\(\oplus: V \times V \rightarrow V\)`  where `\((a, b) \mapsto a \oplus b\)`
+- **Scalar Multiplication:** `\(\oplus: \mathbb{F} \times V \rightarrow V\)` where `\((\gamma, a) \mapsto \gamma \otimes a\)` 
+
+that satisfies the following axioms or all `\(a, b, c \in V\)` and `\(\gamma, \lambda \in \mathbb{F}:\)`
+
+
+- **Commutativity of addition**: `\(x \oplus y = y \oplus x\)`
+- **Additive identity**: `\(a \oplus \mu =a\)` where `\(\mu = \begin{pmatrix} 0 &amp; 0 &amp; 0 &amp; 0 \dots \end{pmatrix}\)` 
+- **Negative Vector**: `\(\forall a \in V, \exists\theta \ni a \oplus \theta = 0\)` where `\(\theta = -a \in V\)`
+- **Associativity of multiplication**: `\(\gamma \otimes (\lambda \otimes a) = (\gamma \otimes \lambda) \otimes a\)`
+- **Multiplicative identity**:  `\(a \otimes \delta = a\)` where `\(\delta = \begin{pmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \dots \end{pmatrix}\)` 
+- **Negative Vector**: `\(\forall a \in V, \exists\theta \ni a \otimes \theta = 0\)` where `\(\theta = -a \in V\)`
+- **First distributive law**:  `\((\gamma + \lambda) \otimes a = \gamma \otimes a \oplus \lambda \otimes a\)` 
+- **Second distributive law**: `\(\gamma \otimes (a \oplus b)= \gamma \otimes a \oplus \gamma \otimes b\)`
+]
+
+
+---
+
+# Vector Space
+
+## Examples
+
+
+.pull-left[
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**Vector Space**
+
+- `\(\mathbb{R}^{n}\)` is a vector space over the field `\(\mathbb{R}\)`
+- `\(\mathbb{R}^{m \times n}-\)` Space of matrices is a vector space over `\(\mathbb{R}\)`
+- The set of functions: continuous functions that map an interval of the real line to `\(\mathbb{R}^{n} ;\left(F\left(\left[t_{1}, t_{2}\right], \mathbb{R}^{n}\right), \mathbb{R}\right)\)`
+
+]]
+
+.pull-right[
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**Not Vector Space**
+
+- `\(S=\left\{\left[\begin{array}{l}a \\ b\end{array}\right] \in \mathbb{R}^{2} \mid a \geq 0\right\}\)`
+- `\(S=\left\{\left[\begin{array}{l}a \\ b\end{array}\right] \in \mathbb{R}^{2} \mid b = 1\right\}\)`
+- `\(S=\left\{\left[\begin{array}{l}a \\ b\end{array}\right] \in \mathbb{R}^{2} \mid b=2 a+1\right\}\)`
+
+]]
+
+
+---
+# Inner Product Space
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-info-circle "></i> Definition**
+
+The **inner product** or **dot product** of `\(\mathbb{R}^{n}\)` is a function `\(\langle,\rangle\)` defined by
+
+`\(\langle\boldsymbol{u}, \boldsymbol{v}\rangle=a_{1} b_{1}+a_{2} b_{2}+\cdots+a_{n} b_{n} \quad \text { for } \boldsymbol{u}=\left[a_{1}, a_{2}, \ldots, a_{n}\right]^{T}, \boldsymbol{v}=\left[b_{1}, b_{2}, \ldots, b_{n}\right]^{T} \in \mathbb{R}^{n}\)`
+
+The inner product `\(\langle,\rangle\)` satisfies the following properties:
+
+- **Linearity:** `\(\langle a \boldsymbol{u}+b \boldsymbol{v}, \boldsymbol{w}\rangle=a\langle\boldsymbol{u}, \boldsymbol{w}\rangle+b\langle\boldsymbol{v}, \boldsymbol{w}\rangle\)`
+- **Symmetry:** `\(\langle u, v\rangle=\langle v, u\rangle\)`
+- **Positive Definite**: `\(u \in V,\langle u, u\rangle \geq 0 ;\)` and `\(\langle u, u\rangle=0 \iff u=0\)`
+
+
+]
+
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-lightbulb "></i> Example**
+
+Let `\(\mathbf{v}=\left[\begin{array}{c}1 &amp; -1 &amp;  4\end{array}\right]\)`, `\(\mathbf{w} = [2 \quad 2  \quad 0].\)` Then `\(\mathbf{v} \cdot \mathbf{w}=1 \cdot 2+(-1) \cdot 2+4 \cdot 0=0\)`
+]
+
+.bg-washed-blue.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-comment-dots "></i> Note**
+
+With the dot product we have geometric concepts such as the **length of a vector**, **the angle between two vectors**, **orthogonality**, etc. We will use these concepts to describe the geometric concepts of vector spaces.
+]
+
+---
+# Inner Product Space
+
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-info-circle "></i> Definition**
+
+An **inner product** of a real vector space `\(V\)` is an assignment that for any two vectors `\(u, v \in V,\)` there is a real number `\(\langle\boldsymbol{u}, \boldsymbol{v}\rangle,\)` satisfying the following properties:
+
+- **Linearity:** `\(\langle a \boldsymbol{u}+b \boldsymbol{v}, \boldsymbol{w}\rangle=a\langle\boldsymbol{u}, \boldsymbol{w}\rangle+b\langle\boldsymbol{v}, \boldsymbol{w}\rangle\)`
+- **Symmetry:** `\(\langle u, v\rangle=\langle v, u\rangle\)`
+- **Positive Definite**: `\(u \in V,\langle u, u\rangle \geq 0 ;\)` and `\(\langle u, u\rangle=0 \iff u=0\)`
+
+The **vector space** `\(V\)` with an **inner product** is called a **(real) inner product space**.
+
+]
+
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-lightbulb "></i> Example**
+
+The vector space `\(\mathbb{R}^{n}\)` with the dot product `\(\boldsymbol{u} \cdot \boldsymbol{v}=a_{1} b_{1}+a_{2} b_{2}+\cdots+a_{n} b_{n}\)` where `\(\boldsymbol{u}=\left[a_{1}, a_{2}, \ldots, a_{n}\right]^{T}, \boldsymbol{v}=\left[b_{1}, b_{2}, \ldots, b_{n}\right]^{T} \in \mathbb{R}^{n},\)` is an **inner product space**. The vector space `\(\mathbb{R}^{n}\)` with this special inner product (dot product) is called the **Euclidean `\(n\)`-space**, and the dot product is called the standard inner product on `\(\mathbb{R}^{n}\)`. 
+]
+
+.bg-washed-yellow.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-question "></i> Question**
+
+Define function `\(\langle u,v \rangle = u_{1}v_{1} + 2u_{2}v_{2}\)` on `\(\mathbb{R}^{2}\)` where `\(u = (u_{1},u_{2})\)` and `\(v = (v_{1},v_{2})\)`.
+]
+
+---
+# Normed Vector Space
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-info-circle "></i> Definition**
+
+Given any vector space `\(V\)`, a norm on `\(V\)` is a function `\(\|\cdot\|: V \rightarrow \mathbb{R}\)` such that for all `\(a, b \in V\)` and `\(\alpha \in \mathbb{R}:\)`
+
+- **Positive:** `\(\|a\| \geq 0\)` and `\(\|a\| = 0 \iff a = 0\)`
+- **Homogeneous:** `\(\|\alpha a\| = \|\alpha\| \|a\|\)`
+- **Triangle inequality**: `\(\|a+b\| \leq\|a\|+\|b\|\)` 
+
+The **vector space** `\(V\)` with an **inner product** is called a **(real) inner product space**.
+
+]
+
+.bg-washed-blue.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-comment-dots "></i> Note**
+
+The homogeneous condition ensures that the norm of the zero vector in `\(V\)` is `\(0\)`; this condition is often included in the definition of a norm.
+]
+
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-lightbulb "></i> Example**
+
+Common examples of norms on `\(\mathbb{R}^{n}\)` are the `\(\ell_{p}\)` norms, where `\(1 \leq p \leq \infty\)`, defined by
+`\(\ell_{p}(x)=\left\{\sum_{j=1}^{n}\left|x_{j}\right|^{p}\right\}^{1 / p}\)`
+]
+
+
+---
+# Normed Vector Space
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-info-circle "></i> Definition**
+
+A normed vector space is a pair `\((V,\|\cdot\|)\)` where `\(V\)` is a vector space and `\(\|\cdot\|: V \rightarrow \mathbb{R}\)` is a **norm**.
+]
+
+.bg-washed-blue.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-comment-dots "></i> Note**
+It is standard to view any normed vector space `\((V,\|\cdot\|)\)` as a **metric space** where the metric `\(d(a, b)=\|x-y\| \quad \forall a, b \in V\)`.
+
+]
+
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-lightbulb "></i> Example**
+
+- `\(V=\mathbb{R}^{K},\)` with `\(\|x\|=\left[\sum_{k=1}^{K} x_{k}^{2}\right]^{\frac{1}{2}}\)` (Euclidean Space)
+- `\(V = \mathbb{R}^{K},\)` with `\(\|x\|=\max _{i}\left|x_{i}\right|\)`
+- `\(V = \mathbb{R}^{K},\)` with `\(\|x\|=\sum_{k=1}^{K}\left|x_{k}\right|\)`
+]
+
+
+---
+# Equivalence of Norms
+
+
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-info-circle "></i> Definition**
+
+Two norms `\(\|\cdot\|_{a}\)` and `\(\|\cdot\|_{b}\)` defined on `\((V, \mathbb{F})\)` are equivalent if one can be bounded with the other. 
+
+`\(\exists \alpha, \beta \in \mathbb{R}_{+}\)` such that
+
+`\(\alpha|| x||_{a} \leq\|x\|_{b} \leq \beta\|x\|_{a}\)`
+]
+
+---
+# Metric Space
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-info-circle "></i> Definition**
+
+Given any set `\(X\)`, the function `\(d: X \times X \rightarrow \mathbb{R}\)` is a metric or distance function on `\(X\)` if the following properties hold:
+
+- **Positivity:** `\(d(x, y) \geq 0\)` for all `\(x, y \in X,\)` with `\(d(x, y)=0 \iff x=y\)`
+- **Symmetry:** `\(d(x, y)=d(y, x)\)`
+- **Triangle Inequality:** `\(d(x, z) \leq d(x, y)+d(y, z), \forall x, y, z \in X\)`.
+
+A function d satisfying conditions (i)-(iii), is called a metric on `\(X\)`.
+]
+
+
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**<i class="fas  fa-lightbulb "></i> Example**
+
+- `\(d(x, y)=\left(\sum_{i \in K}\left(x_{i}-y_{i}\right)^{2}\right)^{1 / 2}\)`
+- Let `\(p \in \mathbb{R}_{+}\)` and `\(d_{p}: \mathbb{R}^{K} \times \mathbb{R}^{K} \rightarrow \mathbb{R}\)` by `\(d_{p}(x, y)=\left(\sum_{i \in K}\left|x_{i}-y_{i}\right|^{p}\right)^{\frac{1}{\rho}}\)`
+- The `\(d_{p}\)` is a distance if only if `\(p \geq 1\)`
+]
+
+
+
 
 
 
