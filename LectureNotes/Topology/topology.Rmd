@@ -307,20 +307,6 @@ It is standard to view any normed vector space $(V,\|\cdot\|)$ as a **metric spa
 ]
 
 
----
-# Equivalence of Norms
-
-
-
-.bg-washed-red.br1.shadow-3.ph2.mt3[
-**`r icon::fa("info-circle")` Definition**
-
-Two norms $\|\cdot\|_{a}$ and $\|\cdot\|_{b}$ defined on $(V, \mathbb{F})$ are equivalent if one can be bounded with the other. 
-
-$\exists \alpha, \beta \in \mathbb{R}_{+}$ such that
-
-$\alpha|| x||_{a} \leq\|x\|_{b} \leq \beta\|x\|_{a}$
-]
 
 ---
 # Metric Space
