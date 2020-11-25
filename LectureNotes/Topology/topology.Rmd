@@ -251,11 +251,7 @@ The **vector space** $V$ with an **inner product** is called a **(real) inner pr
 The vector space $\mathbb{R}^{n}$ with the dot product $\boldsymbol{u} \cdot \boldsymbol{v}=a_{1} b_{1}+a_{2} b_{2}+\cdots+a_{n} b_{n}$ where $\boldsymbol{u}=\left[a_{1}, a_{2}, \ldots, a_{n}\right]^{T}, \boldsymbol{v}=\left[b_{1}, b_{2}, \ldots, b_{n}\right]^{T} \in \mathbb{R}^{n},$ is an **inner product space**. The vector space $\mathbb{R}^{n}$ with this special inner product (dot product) is called the **Euclidean $n$-space**, and the dot product is called the standard inner product on $\mathbb{R}^{n}$. 
 ]
 
-.bg-washed-yellow.br1.shadow-3.ph2.mt3[
-**`r icon::fa("question")` Question**
 
-Define function $\langle u,v \rangle = u_{1}v_{1} + 2u_{2}v_{2}$ on $\mathbb{R}^{2}$ where $u = (u_{1},u_{2})$ and $v = (v_{1},v_{2})$.
-]
 
 ---
 # Normed Vector Space
