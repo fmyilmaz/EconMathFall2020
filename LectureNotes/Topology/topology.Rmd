@@ -323,7 +323,6 @@ Given any set $X$, the function $d: X \times X \rightarrow \mathbb{R}$ is a metr
 A function d satisfying conditions (i)-(iii), is called a metric on $X$.
 ]
 
-
 .bg-washed-green.br1.shadow-3.ph2.mt3[
 **`r icon::fa("lightbulb")` Example**
 

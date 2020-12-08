@@ -1,0 +1,188 @@
+---
+title: "Mathematics for Economic Analysis"
+subtitle: "Linear Algebra"
+author: Ozer Arabaci
+date: ECON 6105, Uludag University
+output:
+  xaringan::moon_reader:
+    css: ['default', 'metropolis', 'metropolis-fonts', 'ou-colors.css']
+    self_contained: false
+    seal: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view","tachyons"))
+xaringanExtra::use_logo("uu_logo.png", position = xaringanExtra::css_position(top = "10px"),width = "65px")
+```
+
+<style>
+.remark-slide-content.hljs-default {
+  border-top: 40px solid #23373B;
+}
+
+.remark-slide-content > h1 {
+  font-size: 40px;
+  margin-top: -80px;
+}
+
+</style>
+
+
+
+# Introduction
+
+In this lecture we will review following topics in linear algebra. 
+
+## Topics to Cover
+
+- Linear Combination of Vectors
+- Linear Indenpendence of Vectors
+- Span
+- Basis of Vector Space
+- Dimension 
+- Orthonormal Basis
+
+---
+
+# Linear Combination of Vectors 
+
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**`r icon::fa("info-circle")` Definition**
+
+Any combination of a number of vectors by means of **vector addition** and **scalar multiplication** of the vectors forms a linear combination of the vectors. 
+
+
+In general a linear combination of $n$ vectors is given as
+$\mathrm{v}=\mathrm{k}_{1} \mathrm{v}_{1}+\mathrm{k}_{2} \mathrm{v}_{2}+\ldots+\mathrm{k}_{n} \mathrm{~V}_{n}$
+where $\mathrm{k}_{1}, \mathrm{k}_{2}, \ldots, \mathrm{k}_{n} \in \mathbb{R}$ or $\mathbb{F}$.
+
+]
+
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**`r icon::fa("lightbulb")` Example**
+
+Let $c, d \in \mathbb{R}$ and $v, w \in \mathbb{R}^{n}$.  Then
+
+
+$cv + dw  = \left[\begin{array}{c} cv_{1} \\ cv_{2} \\ \vdots \\ cv_{n} \end{array}\right] + \left[\begin{array}{c} dw_{1} \\ dw_{2} \\ \vdots \\ dw_{n} \end{array}\right] = \left[\begin{array}{c} cv_{1}+dw_{1} \\ cv_{2}+dw_{2} \\ \vdots \\ cv_{n}+dw_{n} \end{array}\right]$
+
+]
+
+
+---
+
+
+# Linear Indenpendence of Vectors
+
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**`r icon::fa("info-circle")` Definition**
+
+Let $(V, \mathbb{F})$ be a vector space and let $\left\{\mathrm{v}_{1}, \mathrm{v}_{2}, \ldots, \mathrm{v}_{n}\right\}$ be a set of vectors in $\mathrm{V}\left(\mathrm{v}_{i} \in \mathrm{V}\right)$.
+
+
+- The set of vectors, $\left\{v_{1}, v_{2}, \ldots, v_{n}\right\}$, are called linearly independent, iff $\exists$ scalars, $k_{i} \in \mathbb{F}, i=1, \ldots, n$ such that
+
+$k_{1} v_{1}+k_{2} v_{2}+\ldots+k_{n} v_{n}=0\ \Rightarrow k_{1}=k_{2}=\ldots=k_{n}=0$
+
+
+In other words, the linear combination of vectors results in a zero vector, iff all the scalar multipliers are zero.
+
+- The set of vectors is said to be linearly dependent iff $\exists$ scalars, $\mathrm{k}_{i} \in \mathbb{F}, i=1, \ldots, n,$ not all zero and $\mathrm{k}_{1} \mathrm{v}_{1}+\mathrm{k}_{2} \mathrm{v}_{2}+\ldots+\mathrm{k}_{n} \mathrm{v}_{n}=0$
+
+]
+
+---
+
+# Span
+
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**`r icon::fa("info-circle")` Definition**
+
+Let $S$ be a subset of a vector space $V$.
+
+- If $S=\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \ldots, \mathbf{v}_{n}\right\}$ then $\operatorname{Span}(S)$ is the set
+of all linear combinations $r_{1} \mathbf{v}_{1}+r_{2} \mathbf{v}_{2}+\cdots+r_{n} \mathbf{v}_{n}$
+where $r_{1}, r_{2}, \ldots, r_{n} \in \mathbb{R}$
+
+- If $S$ is an infinite set then $\operatorname{Span}(S)$ is the set of all linear combinations $r_{1} \mathbf{u}_{1}+r_{2} \mathbf{u}_{2}+\cdots+r_{k} \mathbf{u}_{k},$
+where $\mathbf{u}_{1}, \mathbf{u}_{2}, \ldots, \mathbf{u}_{k} \in S$ and $r_{1}, r_{2}, \ldots, r_{k} \in \mathbb{R}$
+$(k \geq 1)$
+
+- If $S$ is the empty set then $\operatorname{Span}(S)=\{\mathbf{0}\}$.
+
+]
+
+
+---
+
+# Basis of Vector Space
+
+
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**`r icon::fa("info-circle")` Definition**
+
+Definition: Let $V(\mathbb{F})$ be a vector space. A basis for $V$ is a set of linearly independent vectors in $V$ which spans the vector space $V$.
+
+
+- The space $V$ is finite-dimensional if it has a finite basis.
+- A vector in basis is called basis vector.
+
+]
+
+
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**`r icon::fa("lightbulb")` Example**
+
+- Standard basis for $\mathbb{R}^{2}$ is $\mathrm{S}=\{(1,0),(0,1)\}$
+- Standard basis for $\mathbb{R}^{3}$ is $\mathrm{S}=\{(1,0,0),(0,1,0),(0,0,1)\}$
+- Standard basis for $\mathbb{R}^{n}$ is $S=\{(1,0, \ldots, 0),(0,1,0, \ldots, 0), \ldots,(0,0, \ldots, 0,1)\}$
+]
+
+---
+
+# Dimension 
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**`r icon::fa("info-circle")` Definition**
+
+The number of vectors in a basis of $\mathrm{V}(\mathbb{F})$ is called the dimension of the vector space $\mathrm{V}(\mathbb{F})$
+
+]
+
+
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**`r icon::fa("lightbulb")` Example**
+
+- Dimensions of vector space $\mathbb{R}^{2}(\mathbb{R})$ is $2$.
+- Dimensions of vector space $\mathbb{R}^{n}(\mathbb{R})$ is $\mathrm{n}$.
+- Dimensions of vector space $M_{m \times n}(\mathbb{R})$ is $m \times n$
+]
+
+---
+# Orthonormal Basis
+
+
+.bg-washed-red.br1.shadow-3.ph2.mt3[
+**`r icon::fa("info-circle")` Definition**
+
+A subset $\left\{v_{1}, \ldots, v_{k}\right\}$ of a vector space $V$, with the inner product $\langle,\rangle$, is called orthonormal if $\left\langle v_{i}, v_{j}\right\rangle=0$ when $i \neq j$. That is, the vectors are mutually perpendicular. Moreover, they are all required to have length one: $\left\langle v_{i}, v_{i}\right\rangle=1$.
+
+]
+
+
+.bg-washed-green.br1.shadow-3.ph2.mt3[
+**`r icon::fa("lightbulb")` Example**
+
+$V=\left\{\left[\begin{array}{l} 0.6 \\ 0.8 \end{array}\right], \left[\begin{array}{c} 0.8 \\ -0.6 \end{array}\right]\right\}$ form an orthonormal basis for  $\mathbb{R}^{2}$.
+]
+
